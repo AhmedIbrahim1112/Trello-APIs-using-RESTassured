@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite2">
+    <test name="Label Scenario">
+        <classes>
+            <class name="TestSuite1.BoardTest">
+                <methods>
+                    <exclude name="deleteBoard"/>
+                </methods>
+            </class>
+            <class name="TestSuite1.LabelTest"/>
+            <class name="TestSuite1.BoardTest">
+                <methods>
+                    <include name="deleteBoard"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
